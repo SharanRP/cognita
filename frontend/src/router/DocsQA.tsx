@@ -9,6 +9,7 @@ import Applications from '@/screens/dashboard/docsqa/Applications'
 const DocsQA = lazy(() => import('@/screens/dashboard/docsqa/main'))
 const DocsQAChatbot = lazy(() => import('@/screens/dashboard/docsqa/Chatbot'))
 const DocsQASettings = lazy(() => import('@/screens/dashboard/docsqa/settings'))
+const EvaluationScreen = lazy(() => import('@/screens/EvaluationScreen'))
 
 const FallBack = () => (
   <div className="flex flex-1">
@@ -48,6 +49,10 @@ export const routes = (): BreadcrumbsRoute[] => [
       {
         path: '/applications',
         children: [{ index: true, element: <Applications /> }],
+      },
+      {
+        path: '/evaluation',
+        children: [{ index: true, element: <EvaluationScreen /> }],
       },
       {
         path: '/embed/:id',
